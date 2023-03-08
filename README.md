@@ -5,7 +5,7 @@
 
 `Дашборд, на котором будет видно загрузку процессора`
 
-1. `На график выведены параметры cpu_utilization и cpu_usage`
+1. `На график выведены параметры cpu_utilization и cpu_usage, попытался дать некоторую нагрузку`
 
 **Скриншот 1** cpu_utilization и cpu_usage
 <img src = "img/ya-monitoring.jpg" width = 100%>
