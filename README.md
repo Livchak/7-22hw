@@ -1,7 +1,7 @@
 # Домашнее задание к занятию "`7-22hw`" - `Ливчак Сергей`
 
 Сыылки на конфиг 
-[ansible.cfg](ansible-config-file/ansible.cfg) [Hosts](ansible-config-file/hosts)
+[ansible.cfg](ansible-config-file/ansible.cfg)      и       [Hosts](ansible-config-file/hosts)
 
 ### Задание 1
 
@@ -30,7 +30,7 @@
 
 `Модифицируйте плейбук из пункта 3, задания 1. В качестве приветствия он должен установить IP-адрес и hostname управляемого хоста, пожелание хорошего дня системному администратору в выводе motd.`
 
-[Playbook](ansible-config-file/z2.yml) [j2](ansible-config-file/motd.j2)
+[Playbook](ansible-config-file/z2.yml)      и       [j2](ansible-config-file/motd.j2)
 
 
 **Скриншот 2-1_1** содержимое плейбука и вывод
@@ -57,7 +57,7 @@
 1. `Открыть порт 80, если необходимо, запустить сервер и добавить его в автозагрузку.`
 1. `Сделать проверку доступности веб-сайта (ответ 200, модуль uri).`
 
-[Playbook](ansible-config-file/apache-install.yml) [j2](ansible-config-file/index.html.j2)
+[Playbook](ansible-config-file/apache-install.yml)      и       [j2](ansible-config-file/index.html.j2)
 
 **Скриншот 3-1-1** вывод исполнения Ansible + вывод страничек 
 
