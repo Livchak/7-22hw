@@ -1,0 +1,20 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <title>{{ server_name }}</title>
+</head>
+<body>
+  <h1>Бобро поржаловать на сервер - {{ server_name }}!</h1>
+  <p>IP-адрес сервера - {{ server_ip }}</p>
+  <p>Версия операционной системы - {{ server_os }}</p>
+  <p>Модель процессора - {{ ansible_processor }}</p>
+  <p>Объём оперативной памяти - {{ ansible_memtotal_mb }} MB</p>
+  <p>Свободно из них - {{ ansible_memfree_mb }} MB ({{ (ansible_memfree_mb / ansible_memtotal_mb * 100) | round(2) }}%) свободно</p>
+  {% for disk in ansible_mounts %}
+    {% if disk.mount == '/' %}
+      <p>Размер первого жесткого диска: {{ (disk.size_total / 1024 / 1024 / 1024) | round(2) }} GB</p>
+      <p>Свободное место на диске: {{ (disk.size_available / 1024 / 1024 / 1024) | round(2) }} GB</p>
+    {% endif %}
+  {% endfor %}
+</body>
+</html>
