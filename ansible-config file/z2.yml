@@ -1,0 +1,17 @@
+---
+- name: Установка IP-адреса и hostname
+  hosts: slave2
+  become: true
+
+  tasks:
+    - name: Установка IP-адреса
+      shell: "ifconfig eth0 {{ your_ip_address }} netmask {{ your_subnet_mask }}"
+
+    - name: Установка hostname
+      hostname:
+        name: "{{ your_host_name }}"
+
+    - name: Вывод пожелания администратору
+      debug:
+        msg: "Хорошего дня, администратор!"
+

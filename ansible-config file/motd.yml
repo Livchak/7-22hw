@@ -1,0 +1,9 @@
+---
+- name: "Изменить /etc/motd"
+  hosts: slave2
+  become: true
+  tasks:
+    - name: "Подсовываем файл c переменными"
+      template:
+        src: templates/motd.j2
+        dest: /etc/motd
